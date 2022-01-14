@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2021 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="diamond" unicode="&#xe80;" d="M0 502q0 28 18 45l160 158q17 20 43 20l558 0q26 0 43-20l160-158q18-17 18-43 0-23-16-43l-437-465q-20-21-47-21t-47 21l-437 465q-16 18-16 41z m63 4l134 0 84 84-72 61z m27-31l307-328-196 328-111 0z m146 0l231-383-76 383-155 0z m4 31l143 0-78 65z m2 156l61-50 51 50-112 0z m84-70l80-66 71 58-86 71z m96-117l78-389 78 389-156 0z m8 31l140 0-70 57z m0 156l70-58 68 58-138 0z m95-78l69-58 80 66-65 63z m8-492l231 383-155 0z m71 55l306 328-111 0z m13 359l143 0-65 65z m29 156l51-50 61 50-112 0z m73-72l84-84 133 0-145 145z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

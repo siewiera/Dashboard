@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* color: rgb(44, 42, 42); */
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+body {
+    /* padding: 40px; */
+    font-family: 'Montserrat', sans-serif;
+    background: white;
+    /* background: rgb(103, 95, 190); */
+    /* background: radial-gradient(circle, rgba(103, 95, 190, 1) 0%, rgba(148, 187, 233, 1) 61%); */
+}
+
+
+/* .tlo {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: url('photo/tlo1.png');
+    z-index: -1;
+    background-position: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    box-shadow: 0px 0px 59px 1px white;
+} */
+
+
+/* .form-podsumowanie-wyceny {
+    display: grid;
+    width: 1200px;
+    height: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 21px 20px 8px #00000045;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    box-shadow: 5px 5px 15px 5px black;
+} */
+
+.form-podsumowanie-wyceny {
+    display: grid;
+    width: 1200px;
+    height: 1650px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    margin-top: 20px;
+    box-shadow: 5px 7px 20px 8px #00000045;
+}
+
+.inf-wstepne {
+    position: relative;
+    height: 480px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.inf-platnosciowe {
+    position: relative;
+    height: 1030px;
+    display: grid;
+    margin-bottom: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.podsumowanie-serwisu {
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0px 40px 40px 40px;
+}
+
+.lewa-str {
+    position: relative;
+    width: 400px;
+    height: 170px;
+}
+
+.prawa-str {
+    position: relative;
+    width: 700px;
+    margin-left: 20px;
+}
+
+.logo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.qs {
+    display: flex;
+    list-style: none;
+    border-radius: 5px;
+    width: 350px;
+    /* filter: drop-shadow(0px 0px 1px rgb(0, 0, 0)); */
+    margin: 0 auto;
+}
+
+img {
+    width: 350px;
+    position: relative;
+    height: 180px;
+}
+
+.napis-podsumowanie {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+.dane-wyceny {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nr_wyceny-poj,
+.data-poj {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.nr_wyceny,
+.data {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.dane {
+    display: flex;
+    width: 1120px;
+    height: 290px;
+    left: -420px;
+    position: absolute;
+    margin-top: 40px;
+}
+
+.dane-klienta,
+.dane-sprzetowe {
+    width: 550px;
+    height: 290px;
+}
+
+.dane-klienta {
+    margin-right: 20px;
+    /* border: 1px solid black;
+    border-radius: 10px; */
+}
+
+.dane-sprzetowe {
+    /* border: 1px solid black;
+    border-radius: 10px; */
+}
+
+.napis-klient,
+.napis-sprzet,
+.napis-platnosc {
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.napis-platnosc {
+    text-align: center;
+}
+
+.tytul-dane {
+    font-size: 48px;
+    font-weight: bold;
+    padding-left: 40px;
+}
+
+.klient-wyc,
+.sprzet-wyc {
+    display: grid;
+    padding-left: 40px;
+}
+
+.imie-poj,
+.nazwisko-poj,
+.adres-poj,
+.nr_tel-poj,
+.sprzet-poj,
+.marka-poj,
+.model-poj,
+.zestaw-poj,
+.opis-poj {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.imie,
+.nazwisko,
+.adres,
+.nr_tel,
+.sprzet,
+.marka,
+.model,
+.zestaw,
+.opis {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.dane-platnosciowe {
+    width: 1120px;
+    height: 350px;
+    padding: 0px 40px 0px 40px;
+}
+
+table {
+    width: 100%;
+}
+
+thead {
+    height: 40px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.head-id,
+.head-nazwa,
+.head-ilosc,
+.head-czesc,
+.head-usluga,
+.head-rabat,
+.head-naleznosc {
+    border: 2px solid #353535;
+    border-radius: 4px;
+    background: #515151de;
+    color: white;
+    box-shadow: 0px 0px 5px 2px gray, inset 2px 2px 11px 1px black;
+    text-shadow: 0px 5px 5px black;
+}
+
+td,
+.naleznosc_suma {
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    border: 1px solid #000000a6;
+    border-radius: 4px;
+    box-shadow: 0px 0px 3px black, inset 6px 6px 12px #000000b0;
+}
+
+.platnosc-suma {
+    width: 1120px;
+    height: 200px;
+    padding: 40px;
+    display: flex;
+    justify-content: end;
+    padding-top: 0;
+}
+
+.tekst-suma {
+    font-size: 40px;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 7px black;
+    height: 60px;
+}
+
+.naleznosc_suma {
+    width: 250px;
+    height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: 0px 0px 3px black, inset 13px 6px 21px #000000b0;
+    margin-left: 20px;
+}
+
+.podpis-serwisant,
+.podpis-klient {
+    font-size: 25px;
+}

@@ -1,0 +1,755 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* color: rgb(44, 42, 42); */
+}
+
+body {
+    /* padding: 40px; */
+    font-family: 'Montserrat', sans-serif;
+    background: black;
+    /* background: rgb(103, 95, 190); */
+    /* background: radial-gradient(circle, rgba(103, 95, 190, 1) 0%, rgba(148, 187, 233, 1) 61%); */
+}
+
+.tlo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('photo/tlo1.png');
+    z-index: -1;
+    background-position: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+form {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 80vh; */
+    justify-items: center;
+}
+
+.logo {
+    width: 170px;
+    height: 80px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.qs {
+    display: flex;
+    list-style: none;
+    border: 1px solid #0cff04;
+    border-radius: 5px;
+    width: 170px;
+    height: 80px;
+    filter: drop-shadow(0px 0px 1px rgb(0, 0, 0));
+    animation: animation 2s infinite;
+    animation-duration: 2s;
+    animation-duration: 4s;
+}
+
+@keyframes animation {
+    50% {
+        border: 1px solid #000000;
+        filter: drop-shadow(0px 0px 1px #0cff04);
+    }
+}
+
+.napis_serwis,
+.napis_klient {
+    width: 600px;
+    padding: 5px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: inset 26px 2px 98px -1px #d0d0d04f, 0px 0px 10px 3px #a62ea44f;
+    height: 62px;
+    margin: 40px;
+}
+
+h2 {
+    color: rgba(0, 0, 0, 0.829);
+    font-size: 30px;
+    margin: 10px;
+    text-align: center;
+}
+
+h3 {
+    color: rgb(51, 51, 51);
+    font-size: 27px;
+    margin: 15px 0px 40px 0px;
+}
+
+.error {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.error-pojemnik {
+    width: 400px;
+    height: 30px;
+    background-color: #a83a3a9c;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    left: 440px;
+    border: 1px solid #ce2a2a;
+    border-radius: 12px;
+    top: 5px;
+    backdrop-filter: blur(10px);
+    margin-left: -22px;
+    transition: 1s;
+    color: #ffffff94;
+    box-shadow: 0px 0px 15px 1px #ce2a2a, inset 0px 0px 20px 2px #000000ba;
+}
+
+.ok {
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+    left: 85%;
+    transition: 1s ease-in-out;
+}
+
+.ok-pojemnik {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    top: 5px;
+    transition: 1s ease-in-out;
+}
+
+
+/* wycena.php */
+
+.naglowek {
+    height: 70px;
+    position: relative;
+    display: flex;
+    align-items: end;
+    width: 100%;
+}
+
+.panel_klient {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 420px;
+    border: 1px solid white;
+    border-radius: 12px;
+    background-color: rgba(196, 196, 196, 0.226);
+    backdrop-filter: blur(10px);
+    box-shadow: inset 36px 42px 68px -20px #0000004f, 5px 5px 20px 10px #0000004f;
+}
+
+.panel_serwis {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border: 1px solid white;
+    border-radius: 12px;
+    background-color: rgba(196, 196, 196, 0.226);
+    backdrop-filter: blur(10px);
+    box-shadow: inset 36px 42px 68px -20px #0000004f, 5px 5px 20px 10px #0000004f;
+    margin: 20px;
+}
+
+.wycena_przycisk {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dane_sprzetowe,
+.wycena {
+    display: grid;
+    position: relative;
+}
+
+.wycena_pojemnik {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 90px;
+    margin-right: 20px;
+    height: 110px;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px white;
+    background: #000000ab;
+    z-index: 0;
+}
+
+.dane_klienta {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+}
+
+.wycena_label {
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: 50px;
+    margin: -3px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.admin_label,
+.data_label,
+.sprzet_label,
+.marka_label,
+.model_label,
+.zestaw_label,
+.opis_label,
+.lp_label,
+.nazwa_label,
+.ilosc_label,
+.cena_label,
+.marza_label,
+.rabat_label,
+.naleznosc_label,
+.zysk_label,
+.status_label {
+    color: white;
+    width: 220px;
+    height: 30px;
+    border: 1px solid #dddddd27;
+    border-radius: 12px;
+    background-color: rgba(196, 196, 196, 0.226);
+    text-align: center;
+    box-shadow: 5px 5px 10px 5px #00000094;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0px 10px 10px 10px;
+    box-shadow: 0px 0px 8px 2px #4b2df8, inset -11px -2px 16px #0000006e;
+    transition: border ease-in-out 0.2s, background-color ease-in-out 0.2s, box-shadow ease-in-out 0.2s;
+}
+
+.admin_label:hover,
+.data_label:hover,
+.sprzet_label:hover,
+.marka_label:hover,
+.model_label:hover,
+.zestaw_label:hover,
+.opis_label:hover,
+.lp_label:hover,
+.nazwa_label:hover,
+.ilosc_label:hover,
+.cena_label:hover,
+.marza_label:hover,
+.rabat_label:hover,
+.naleznosc_label:hover,
+.zysk_label:hover,
+.status_label:hover {
+    border: 1px solid #dddddd27;
+    background-color: rgba(104, 103, 103, 0.363);
+    box-shadow: 0px 0px 5px 2px #4b2df8, inset -11px -2px 16px #0000006e;
+    transition: border ease-in-out 0.2s, background-color ease-in-out 0.2s, box-shadow ease-in-out 0.2s;
+}
+
+.admin_label:valid,
+.data_label:valid,
+.sprzet_label:valid,
+.marka_label:valid,
+.model_label:valid,
+.zestaw_label:valid,
+.opis_label:valid,
+.lp_label:valid,
+.nazwa_label:valid,
+.ilosc_label:valid,
+.cena_label:valid,
+.marza_label:valid,
+.rabat_label:valid,
+.naleznosc_label:valid,
+.zysk_label:valid,
+.status_label:valid {
+    border: 1px solid #dddddd27;
+    background-color: rgba(104, 103, 103, 0.363);
+    box-shadow: 0px 0px 5px 2px #000, inset -11px -2px 16px #0000006e;
+    transition: border ease-in-out 0.2s, background-color ease-in-out 0.2s, box-shadow ease-in-out 0.2s;
+    backdrop-filter: blur(2px);
+    transition: border ease-in-out 0.2s, background-color ease-in-out 0.2s, backdrop-filter ease-in-out 0.2s, box-shadow ease-in-out 0.2s;
+}
+
+.admin_span,
+.data_span,
+.sprzet_span,
+.marka_span,
+.model_span,
+.zestaw_span,
+.opis_span,
+.lp_span,
+.nazwa_span,
+.ilosc_span,
+.ilosc_span2,
+.cena_span,
+.cena_span2,
+.marza_span,
+.marza_span2,
+.marza_zl_span2,
+.rabat_span,
+.rabat_span2,
+.rabat_zl_span2,
+.naleznosc_span,
+.naleznosc_span2,
+.zysk_span,
+.zysk_span2,
+.status_span {
+    position: absolute;
+    width: 192px;
+    font-size: 15px;
+    transition: 0.5s;
+    z-index: -1;
+    font-weight: 600;
+    transform: translate(0px, -26px);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.83);
+    text-shadow: 0px -2px 4px black;
+}
+
+.ilosc_span2,
+.cena_span2,
+.marza_span2,
+.marza_zl_span2,
+.rabat_span2,
+.rabat_zl_span2,
+.naleznosc_span2,
+.zysk_span2 {
+    text-shadow: none;
+}
+
+.admin_label,
+.marka_label,
+.model_label,
+.status_label {
+    width: 150px;
+}
+
+.data_label,
+.lp_label,
+.ilosc_label,
+.marza_label,
+.rabat_label {
+    width: 100px;
+}
+
+.ilosc_label {
+    padding-right: 38px;
+}
+
+.marza_label,
+.rabat_label {
+    padding-right: 27px;
+}
+
+.cena_label,
+.naleznosc_label,
+.zysk_label {
+    width: 130px;
+    padding-right: 27px;
+}
+
+.cena_span2,
+.naleznosc_span2,
+.zysk_span2 {
+    width: 25px;
+    transform: translate(49px, 4px);
+    font-size: 17px;
+    z-index: 1;
+}
+
+.ilosc_span2 {
+    width: 25px;
+    transform: translate(29px, 4px);
+    font-size: 17px;
+    z-index: 1;
+}
+
+.marza_span2,
+.rabat_span2 {
+    width: 25px;
+    transform: translate(34px, 5px);
+    font-size: 17px;
+    z-index: 1;
+}
+
+.marza_zl_span2,
+.rabat_zl_span2 {
+    width: 25px;
+    transform: translate(34px, 44px);
+    font-size: 17px;
+    z-index: 1;
+}
+
+.naglowek .admin_label:focus~.admin_span,
+.naglowek .admin_label:valid~.admin_span,
+.naglowek .data_label:focus~.data_span,
+.naglowek .data_label:valid~.data_span,
+.dane_sprzetowe .sprzet_label:focus~.sprzet_span,
+.dane_sprzetowe .sprzet_label:valid~.sprzet_span,
+.dane_sprzetowe .marka_label:focus~.marka_span,
+.dane_sprzetowe .marka_label:valid~.marka_span,
+.dane_sprzetowe .model_label:focus~.model_span,
+.dane_sprzetowe .model_label:valid~.model_span,
+.dane_sprzetowe .zestaw_label:focus~.zestaw_span,
+.dane_sprzetowe .zestaw_label:valid~.zestaw_span,
+.dane_sprzetowe .opis_label:focus~.opis_span,
+.dane_sprzetowe .opis_label:valid~.opis_span,
+.wycena .lp_label:focus~.lp_span,
+.wycena .lp_label:valid~.lp_span,
+.wycena .nazwa_label:focus~.nazwa_span,
+.wycena .nazwa_label:valid~.nazwa_span,
+.wycena .ilosc_label:focus~.ilosc_span,
+.wycena .ilosc_label:valid~.ilosc_span,
+.wycena .cena_label:focus~.cena_span,
+.wycena .cena_label:valid~.cena_span,
+.wycena .marza_label:focus~.marza_span,
+.wycena .marza_label:valid~.marza_span,
+.wycena .rabat_label:focus~.rabat_span,
+.wycena .rabat_label:valid~.rabat_span,
+.wycena .naleznosc_label:focus~.naleznosc_span,
+.wycena .naleznosc_label:valid~.naleznosc_span,
+.wycena .zysk_label:focus~.zysk_span,
+.wycena .zysk_label:valid~.zysk_span,
+.wycena .status_label:focus~.status_span,
+.wycena .status_label:valid~.status_span {
+    transform: translate(0px, -35px);
+    color: rgba(255, 255, 255, 0.83);
+    text-shadow: 0px -2px 4px black;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.dalej_sprzet,
+.dalej_wycena,
+.zapisz,
+.dodaj {
+    border: 1px solid #0000003d;
+    width: 150px;
+    height: 29px;
+    border-radius: 12px;
+    font-size: 17px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+    margin-left: 12px;
+    box-shadow: inset 5px 15px 30px #3917dfeb, inset -21px -23px 16px #0d0d0d, 0px 0px 5px 6px #3917dfeb;
+    color: white;
+}
+
+.dodaj {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 18px;
+    border-radius: 20px;
+    top: 120px;
+    border: 1px solid #56df17eb;
+    box-shadow: inset 3px 6px 20px #56df17eb, inset -8px -19px 6px #0d0d0d, 0px 0px 8px 1px #56df17eb;
+}
+
+.dalej_sprzet:hover,
+.dalej_wycena:hover,
+.zapisz:hover,
+.dodaj:hover {
+    border: 1px solid #0000003d;
+    width: 150px;
+    height: 29px;
+    border-radius: 12px;
+    font-size: 17px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+    margin-left: 12px;
+    box-shadow: inset 5px 15px 30px #0d0d0d, inset -21px -23px 16px #3917dfeb, 0px 0px 5px 6px #0d0d0d;
+    color: white;
+    cursor: pointer;
+}
+
+.dodaj:hover {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 13px;
+    border-radius: 20px;
+    top: 115px;
+    border: 2px solid #3917dfeb;
+    box-shadow: inset 3px 6px 9px #ffffff69, inset -21px -23px 16px #3917dfeb, 0px 0px 9px 1px white;
+}
+
+.dodaj:active {
+    box-shadow: inset 3px 6px 9px #ffffff69, inset -21px -23px 16px #040404d9, 0px 0px 5px 0px white;
+    border: 2px solid #000;
+}
+
+
+/*  */
+
+
+/* klient.php */
+
+.icon-ok:before {
+    content: '\e801';
+    /* position: absolute; */
+    color: #0cff04;
+}
+
+.naglowek_serwis,
+.naglowek_klient {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 40px;
+}
+
+.klient_label {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.klientID_label,
+.imie_label,
+.nazwisko_label,
+.adres_label,
+.nr_tel_label {
+    width: 220px;
+    height: 30px;
+    border: 1px solid #dddddd27;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 5px 5px 10px 5px #00000094;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0px 10px 10px 10px;
+    box-shadow: 0px 0px 8px 2px #4b2df8, inset -11px -2px 16px #0000006e;
+    transition: border ease-in-out 0.2s, background-color ease-in-out 0.2s, box-shadow ease-in-out 0.2s;
+    background-color: rgba(104, 103, 103, 0.363);
+}
+
+.vip_label {
+    width: 14px;
+    height: 14px;
+    box-shadow: 0px 0px 8px 2px #4b2df8, inset -11px -2px 16px #0000006e;
+    transition: ease-in-out 0.2s;
+}
+
+.vip_label:valid {
+    box-shadow: 0px 0px 5px 2px #000;
+    transition: ease-in-out 0.2s;
+}
+
+input[type=text] {
+    text-transform: capitalize;
+}
+
+input[type='checkbox'] {}
+
+.klientID_label:hover,
+.imie_label:hover,
+.nazwisko_label:hover,
+.adres_label:hover,
+.nr_tel_label:hover {
+    border: 1px solid #dddddd27;
+    background-color: rgba(104, 103, 103, 0.363);
+    box-shadow: 0px 0px 5px 2px #4b2df8, inset -11px -2px 16px #0000006e;
+    transition: border ease-in-out 0.2s, background-color ease-in-out 0.2s, box-shadow ease-in-out 0.2s;
+}
+
+.klientID_label:valid,
+.imie_label:valid,
+.nazwisko_label:valid,
+.adres_label:valid,
+.nr_tel_label:valid {
+    border: 1px solid #dddddd27;
+    box-shadow: 0px 0px 5px 2px #000, inset -11px -2px 16px #0000006e;
+    backdrop-filter: blur(2px);
+    transition: border ease-in-out 0.2s, background-color ease-in-out 0.2s, backdrop-filter ease-in-out 0.2s, box-shadow ease-in-out 0.2s;
+    background-color: rgba(196, 196, 196, 0.226);
+}
+
+.klientID_span,
+.imie_span,
+.nazwisko_span,
+.adres_span,
+.nr_tel_span,
+.vip_span {
+    position: absolute;
+    width: 200px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    z-index: -1;
+    font-weight: 600;
+    transform: translate(0px, -5px);
+    text-align: center;
+    transition: 2.5s ease-in-out;
+    text-shadow: 3px 3px 8px #000;
+}
+
+.vip_span {
+    transform: translate(-25px, 0px);
+}
+
+.klientID_label {
+    width: 100px;
+}
+
+.imie_label,
+.nazwisko_label,
+.nr_tel_label {
+    width: 150px;
+}
+
+.dane_klienta .klientID_label:focus~.klientID_span,
+.dane_klienta .klientID_label:valid~.klientID_span,
+.dane_klienta .imie_label:focus~.imie_span,
+.dane_klienta .imie_label:valid~.imie_span,
+.dane_klienta .nazwisko_label:focus~.nazwisko_span,
+.dane_klienta .nazwisko_label:valid~.nazwisko_span,
+.dane_klienta .adres_label:focus~.adres_span,
+.dane_klienta .adres_label:valid~.adres_span,
+.dane_klienta .nr_tel_label:focus~.nr_tel_span,
+.dane_klienta .nr_tel_label:valid~.nr_tel_span {
+    transform: translate(-85px, -5px);
+    color: rgba(4, 4, 4, 0.66);
+    font-weight: 600;
+    text-align: left;
+    transition: 0.5s ease-in-out;
+    text-shadow: none;
+}
+
+.dane_klienta .vip_label:valid~.vip_span {
+    transform: translate(-172px, 0px);
+    color: rgba(4, 4, 4, 0.66);
+    font-weight: 600;
+    transition: 0.5s ease-in-out;
+    text-shadow: none;
+}
+
+.zapisz_klient {
+    border: 1px solid #0000003d;
+    width: 100%;
+    height: 30px;
+    border-radius: 12px;
+    font-size: 17px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+    box-shadow: inset 5px 15px 30px #3917dfeb, inset -21px -23px 16px #0d0d0d, 0px 0px 5px 6px #3917dfeb;
+    color: white;
+    margin-top: 20px;
+}
+
+.zapisz_klient:hover {
+    box-shadow: inset 5px 15px 30px #0d0d0d, inset -21px -23px 16px #3917dfeb, 0px 0px 5px 6px #0d0d0d;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+
+/*  */
+
+
+/* udana_rejestracja.php */
+
+.pojemnik {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.pojemnik_serwis,
+.pojemnik_klient {
+    width: 800px;
+    height: 300px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 12px;
+    background-color: rgba(196, 196, 196, 0.226);
+    backdrop-filter: blur(10px);
+    box-shadow: inset 36px 42px 68px -20px #0000004f, 5px 5px 20px 10px #0000004f;
+}
+
+.napis-rejestracja {
+    position: relative;
+    text-align: center;
+    margin: 40px;
+}
+
+.logowanie {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 125px;
+}
+
+.a_button {
+    border: 1px solid #0000003d;
+    width: 223px;
+    height: 35px;
+    border-radius: 12px;
+    font-size: 17px;
+    border: 1px solid #0000003d;
+    background: #00000045;
+    box-shadow: inset 0px 0px 30px black, 5px 5px 10px 5px #0000004F;
+    color: rgba(255, 255, 255, 0.68);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+}
+
+.a_button:hover {
+    border: 1px solid #0040ff61;
+    background: #0004ff45;
+    box-shadow: inset 0px 0px 30px #060a42, 5px 5px 10px 5px #1518F04D;
+    color: rgba(255, 255, 255, 0.68);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+
+/*  */
